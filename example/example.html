@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps</title>
+
+</head>
+<body>
+
+  <div id="gmap_canvas" style="height: 500px;"> </div>
+
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQJscxJPr0uxRAX7cgjKeGmL22oi4k28s&amp;v=3.exp"></script>
+  <script type="text/javascript" src="../s/js/googleMaps.min.js"></script>
+
+  <script type="text/javascript">
+    var color = "#00D6FF";
+    var saturation = 100;
+
+    $('#gmap_canvas').googleMaps({
+      byAddress: true,
+      lat: "-31.376869",
+      long: "138.449499",
+      markerIcon: '../s/img/icons/pointer-blue.png',
+      draggable: true,
+      zoom: 12,
+      locations: [
+        {
+          lat: "-31.376869",
+          long: "138.449499",
+          title: "Ikara-Flinders Ranges National Park",
+          address: "Blinman SA 5730, Australia"
+        }
+      ],
+      zoom: 16
+    });
+  </script>
+</body>
+</html>
